@@ -1,7 +1,7 @@
 clone_depth: 5
-
-auth_token:
-  secure: LN5FX3sO18XNp7+LxRHPb1T/Y0Vbi/dnv5gpBhI8WpG4QY7im9rq2C56eFJFTD2r
+deploy:
+  auth_token:
+    secure: LN5FX3sO18XNp7+LxRHPb1T/Y0Vbi/dnv5gpBhI8WpG4QY7im9rq2C56eFJFTD2r
 install:
 - node --version
 - npm --version
