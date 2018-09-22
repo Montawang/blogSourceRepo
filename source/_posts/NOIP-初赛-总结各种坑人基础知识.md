@@ -1,5 +1,5 @@
 ---
-title: '[NOIP 初赛] 总结各种坑人基础知识（一）'
+title: '[NOIP 初赛] 总结各种坑人基础知识'
 mathjax: true
 copyright: true
 comment: true
@@ -25,6 +25,12 @@ categories: NOIP
 **NOIP（1995 至今）:** 已组织 22 次比赛，全国同一时间，不同地点。
 **IOI（1989 至今）:** 已组织 19 次比赛，IOI 2000 由中国主办，CCF 承办。
 **APIO（2007 创建）:** APIO 中国赛区由中国计算机学会组织。
+
+{% endnote %}
+
+{% note warning %}
+
+**NOIP 2022 年开始将停止支持 Pascal**
 
 {% endnote %}
 
