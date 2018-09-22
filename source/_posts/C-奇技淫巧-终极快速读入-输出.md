@@ -7,7 +7,7 @@ date: 2018-09-22 18:24:03
 tags:
   - C++ 奇技淫巧
 categories: 奇技淫巧
-photo:
+photo: /2018/09/22/C-奇技淫巧-终极快速读入-输出/photo1.png
 ---
 
 {% note default %}
