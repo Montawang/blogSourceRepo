@@ -24,7 +24,7 @@ photo: /2018/09/22/C-奇技淫巧-终极快速读入-输出/photo1.png
 inline char nextchar() {
   static char buf[100000], *p1 = buf, *p2 = buf;
   return (p1 == p2) &&
-    (p2 = (p1 = buf) + fread(buf, 1, 100000, stdin), p1 == p1) ? EOF : *p1++;
+    (p2 = (p1 = buf) + fread(buf, 1, 100000, stdin), p1 == p2) ? EOF : *p1++;
 } // 使用 fread() 来提高速度
 ```
 ### 快读使用 `nextchar()`
@@ -126,7 +126,7 @@ using namespace std::chrono;
 inline char nextchar() {
   static char buf[100000], *p1 = buf, *p2 = buf;
   return (p1 == p2) &&
-    (p2 = (p1 = buf) + fread(buf, 1, 100000, stdin), p1 == p1) ? EOF : *p1++;
+    (p2 = (p1 = buf) + fread(buf, 1, 100000, stdin), p1 == p2) ? EOF : *p1++;
 } // 使用 fread() 来提高速度
 
 inline void read(int& x) {
