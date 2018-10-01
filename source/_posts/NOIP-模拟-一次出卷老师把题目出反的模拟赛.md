@@ -269,3 +269,14 @@ int main() {
 今天的题目做完后真的是感觉出卷老师出反了，以后还是得先浏览一遍题目 orz。
 
 ---
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-7465666912424994"
+     data-ad-slot="3198608984"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
