@@ -136,9 +136,19 @@ int main() {
 这道题老师来说了下 $n$ 最大有 $5000$，于是坚信了这道题是数论题 TAT。所以思考的角度完全错误，直接爆零。
 比赛结束后知道了应该用背包做，但是裸的多重背包会 TLE，更何况有 $5000$ 的数据，所以去阅读了标程，发现了原来正解是一个很神奇的 dp。
 
-首先 我们令
+首先我们令 $f[i][j]$ 表示当总和为 $j$ 时，$i$ 这个数还可以使用的个数，$a[i]$ 表示 $i$ 这个数可以使用的总个数，于是我们有动态规划方程如下：
 
+$$
+f[i][j] = 
+\begin{cases}
+a[i], & \text{when $f[i - 1][j]\geqslant 0$} \\
+f[i][j - i] - 1, & \text{when $j\geqslant i$ and $f[i - 1][j]\leqslant 0$} \\
+-1, & \text{otherwise}
+\end{cases}\\
+\text{There is a solution only when $f[6][\frac{\sum_{i = 1}^6 a[i]\times i}{2}] \geqslant 0$}
+$$
 
+然后发现数组 `f` 其实只需要一维就够了，而且 $j$ 也只需要枚举到 $\frac{\sum_{i = 1}^6 a[i]\times i}{2}$ 就行了，所以实现的时候只要这样子就行了：
 
 ```cpp
 #include <bits/stdc++.h>
@@ -167,8 +177,8 @@ inline void write(int x) {
   while (top) putchar(stk[top--] + '0');
 }
 
-
 #define maxn 20010
+// 这个 maxn 不能省
 int n, a[10], sum, f[maxn];
 
 int main() {
@@ -193,5 +203,69 @@ int main() {
   return 0;
 }
 ```
+
+### T3 cmi
+
+#### 题目
+
+    有一全排列，每次移动一个数，求使其变为升序的最少移动次数
+
+    输入 两行，第一行为排列中数字的数量，第二行为排列
+
+    输出 一行，最少移动的次数
+
+#### 题解
+
+就是最长上升子序列（LIS），中间再加一点优化（可以二分，也可以直接用 `lower_bound()` 函数）
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+inline void read(int &x) {
+  x = 0;
+  static char ch = 0;
+  static bool sign = false;
+  while (!isdigit(ch)) { sign |= (ch == '-'); ch = getchar(); }
+  while (isdigit(ch)) { x = x * 10 + (ch ^ 48); ch = getchar(); }
+  x = sign ? -x : x;
+}
+
+inline void write(int x) {
+  static int stk[100], top = 0;
+  if (x == 0) { putchar('0'); return; }
+  if (x < 0) { putchar('-'); x = -x; }
+  while (x) { stk[++top] = x % 10; x /= 10; }
+  while (top) putchar(stk[top--] + '0');
+}
+
+#define maxn 200010
+
+int n, a[maxn], f[maxn], ans;
+
+int main() {
+  freopen("cmi.in", "r", stdin);
+  freopen("cmi.out", "w", stdout);
+  read(n); read(a[1]);
+  ans = 1;
+  f[1] = a[1];
+  for (int i = 2; i <= n; ++i) {
+    read(a[i]);
+    if (a[i] > f[ans]) {
+      ans++;
+      f[ans] = a[i];
+    } else {
+      int pos = lower_bound(f + 1, f + ans + 1, a[i]) - f;
+      f[pos] = a[i];
+    }
+  }
+  write(n - ans);
+  return 0;
+}
+```
+
+### 总结
+
+今天的题目做完后真的是感觉出卷老师出反了，以后还是得先浏览一遍题目 orz。
 
 ---
