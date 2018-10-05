@@ -160,5 +160,6 @@ int main() {
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
-
-<br/>
+<a href="https://www.vultr.com/?ref=7537392">
+  <img src="https://www.vultr.com/media/banner_1.png" width="827" height="110">
+</a>
