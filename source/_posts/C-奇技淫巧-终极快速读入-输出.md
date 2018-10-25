@@ -131,8 +131,8 @@ inline char nextchar() {
 
 inline void read(int& x) {
   x = 0;
-  static char ch = 0;
-  static bool sign = false;
+  char ch = 0;
+  bool sign = false;
   // 使用 static 节省空间
   while (!isdigit(ch)) { sign |= (ch == '-'); ch = nextchar(); }
   while (isdigit(ch)) { x = x * 10 + (ch ^ 48); ch = nextchar(); }
