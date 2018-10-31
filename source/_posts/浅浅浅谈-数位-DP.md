@@ -5,7 +5,8 @@ copyright: true
 comment: true
 date: 2018-10-30 16:12:04
 tags:
-categories:
+  - 动态规划
+categories: 动态规划
 photo: /2018/10/30/浅浅浅谈-数位-DP/photo.png
 ---
 
@@ -186,3 +187,19 @@ int main() {
   return 0;
 }
 ```
+
+---
+
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+​     style="display:block; text-align:center;"
+​     data-ad-layout="in-article"
+​     data-ad-format="fluid"
+​     data-ad-client="ca-pub-7465666912424994"
+​     data-ad-slot="3198608984"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<br/>
