@@ -86,6 +86,7 @@ int main() {
   cout << (solve(m) - solve(n - 1));
   return 0;
 }
+```
 
 ### 例题
 
@@ -141,7 +142,7 @@ int main() {
 
 #### [Windy 数](https://www.luogu.org/problemnew/show/P2657)
 
-```cpp
+​```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -185,15 +186,3 @@ int main() {
   return 0;
 }
 ```
-
-
-
-
-
-```
-
-
-
-
-
----
