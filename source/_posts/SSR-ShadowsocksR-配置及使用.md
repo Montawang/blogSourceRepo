@@ -37,7 +37,7 @@ photo:
 #### 配置服务端 ShadowsocksR
 
 1. 首先你要有一个 VPS，推荐使用 Vultr 这个 VPS 服务商
-2. 使用 ssh 登陆到 root 用户后运行一下命令：
+2. 使用 ssh 登陆到 root 用户后运行一下命令（这是一位大佬的一键配置文件，[他的网站](https://teddysun.com/)）：
 ```shell
 wget --no-check-certificate https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocksR.sh
 chmod +x shadowsocksR.sh
